@@ -1,0 +1,8 @@
+.pic-Icon-small{width: 20px; height: 20px; display: inline-block;}
+.pic-medium{width: 50px; height: 50px;}
+.pic-Icon-large{width: 75px; height: 75px; float: left;}
+#pic-IconGeoDreamers{background-image: url("./images/IconGeoDreamers.png"); background-repeat: no-repeat; background-size: 100% 100%;}
+#pic-IconGeoMakers{background-image: url("./images/IconGeoMakers.png"); background-repeat: no-repeat; background-size: 100% 100%;}
+#pic-IconGeoBoosters{background-image: url("./images/IconGeoBoosters.png"); background-repeat: no-repeat; background-size: 100% 100%;}
+#pic-GeoMakingInAction{background-image: url("./images/GeoMakingInAction.png"); background-repeat: no-repeat; background-size: 100% 100%;}
+.button-text{text-align: left; height: 75px;}
