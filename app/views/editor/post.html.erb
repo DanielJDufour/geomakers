@@ -9,30 +9,77 @@
       <hr />
     </div>
 
-  <% else %>
-    <h3 class="hidden-phone"><i class="icon-file"></i> What's a <br />research note?</h3>
-    <h4 class="visible-phone"><i class="icon-file"></i> What's a research note? <a onClick="$('#research-note-detail').toggleClass('hidden-phone')">Learn more &raquo;</a></h4>
-    
-    <div id="research-note-detail" class="hidden-phone">
-      <p>At Public Lab, we all collaborate to invent and improve open source environmental science tools. <b>Research notes</b> are the primary way we share what we learn, ask questions, pose challenges, and critique one another's work.</p>
-      <p><b>Research notes can include:</b></p>
-      <ul>
-        <li>photos of what you've made</li>
-        <li>requests for troubleshooting</li>
-        <li>proposals for new projects</li>
-        <li>announcements of events</li>
-        <li>reports from a field test or meetup</li>
-        <li>etc!</li>
-      </ul>
-      <hr />
-      <p><b><a href="http://www.youtube.com/watch?v=rsy__zTTh8c" target="_blank"><i class="icon icon-film"></i> Watch a 30 second video on posting research notes &raquo;</a></b></p>
-      <hr />
+	<% else %>
+		<% if not(params[:tags].blank?)%>
+			<% if params[:tags].include? "GeoDreamer"%>
+				<h3 class="hidden-phone"><i class="icon-file"></i> What's a <br />GeoDreamer?</h3>
+				<h4 class="visible-phone"><i class="icon-file"></i> What's a GeoDreamer?</h4>
+				<p class="visible-phone"><a onClick="$('#GeoDreamer-note-detail').removeClass('hidden-phone')">Read more &raquo;</a></p>
+				<div id="GeoDreamer-note-detail" class="hidden-phone">
+				<p>At GeoMakers, we all collaborate to invent and improve open source Maker's projects that involve mapping, remote sensing, navigating, or better understanding our world geographically, as it changes (or has changed) over time.  All this begins with <a href ="./tag/GeoDreamer" style = "font-weight: bold">GeoDreams</a> - or visions of amazing geo-related things to make.  GeoDreams are one way that we share what we know, what we don't know, and what we aspire to accomplish together.  In GeoDreams you can ask questions, pose challenges, and share your vision of the future of GeoMaking!</p>
+				<p><b>GeoDreams can be:</b></p>
+				<ul>
+					<li>sketches and diagrams of your idea</li>
+					<li>outlandish and unfounded ideas</li>
+					<li>others&#39; ideas that you would like to see become reality&#33;</li>
+					<li>etc.&#33;</li>
+				</ul>
+				<hr />
+				<p><b><a href="" target="_blank"><i class="icon icon-film"></i> Watch a 30 second video on posting GeoDreams&#33; &raquo;</a></b></p>
+			<% elsif params[:tags].include? "GeoMaker"%>
+				<h3 class="hidden-phone"><i class="icon-file"></i> What's a <br />GeoMaker?</h3>
+				<h4 class="visible-phone"><i class="icon-file"></i> What's a GeoMaker?</h4>
+				<p class="visible-phone"><a onClick="$('#GeoMaker-note-detail').removeClass('hidden-phone')">Read more &raquo;</a></p>
+				<div id="GeoMaker-note-detail" class="hidden-phone">
+				<p>GeoMakers bring GeoDreams to life&#33;  They actually MAKE things that map, sense, navigate or help us better understand the world around us, as it changes (or has changed) over time.  Sometimes, these GeoMaker projects will be implementations of other's <a href ="./tag/GeoDreamer" style = "font-weight: bold">GeoDreams</a>.  Sometimes they will be something you just hack together.  Once GeoMakers have made something, they can publish their recipes (e.g., ingredients, instructions, etc.) right here for others to implement as <a href ="./tag/GeoBooster" style = "font-weight: bold">GeoBoosters!</a></p>
+				<p><b>GeoMaker projects should include:</b></p>
+				<ul>
+					<li>photos of what you have made</li>
+					<li>diagrams of your project</li>
+					<li>ingredients (e.g., detailed component list with web links)</li>
+					<li>step by step instructions</li>
+					<li>links to external resources</li>			
+				</ul>
+				<hr />
+				<p><b><a href="" target="_blank"><i class="icon icon-film"></i> Watch a 30 second video on posting GeoMaker Projects&#33; &raquo;</a></b></p>
+			<% elsif params[:tags].include? "GeoBooster" %>
+				<h3 class="hidden-phone"><i class="icon-file"></i> What's a <br />GeoBooster?</h3>
+				<h4 class="visible-phone"><i class="icon-file"></i> What's a GeoBooster?</h4>
+				<p class="visible-phone"><a onClick="$('#GeoBooster-note-detail').removeClass('hidden-phone')">Read more &raquo;</a></p>
+				<div id="GeoBooster-note-detail" class="hidden-phone">
+				<p>Sometimes you will be the <a href ="./tag/GeoDreamer" style = "font-weight: bold">GeoDreamer</a> or the <a href ="./tag/GeoMaker" style = "font-weight: bold">GeoMaker</a>.  And sometimes you will love someone else's idea or project implementation.  When that happens, be a GeoBooster, and try to build these ideas yourself.  Test them out, have fun with them, have events around them, share your experiences, and recommend changes and enhancements!  Share these projects with your friends, or with your kid's teachers.</p>
+				<p><b>GeoBoosters can help by sharing:</b></p>
+				<ul>
+					<li>event announcements</li>
+					<li>requests for troubleshooting</li>
+					<li>reports from a field test</li>
+					<li>ideas for enhancements</li>
+				</ul>
+				<hr />
+				<p><b><a href="" target="_blank"><i class="icon icon-film"></i> Watch a 30 second video on posting GeoBooster experiences&#33; &raquo;</a></b></p>
+			<% else %>
+				<h3 class="hidden-phone"><i class="icon-file"></i> Don&#39;t forget <br /> to tag&#33;</h3>
+				<h4 class="visible-phone"><i class="icon-file"></i> Don&#39;t forget to tag&#33;</h4>
+				<p class="visible-phone"><a onClick="$('#note-detail').removeClass('hidden-phone')">Read more &raquo;</a></p>
+				<div id="note-detail" class="hidden-phone">
+				<p>Make sure to tag your post as a <a href ="./tag/GeoDreamer" style = "font-weight: bold">GeoDreamer</a>, <a href ="./tag/GeoMaker" style = "font-weight: bold">GeoMaker</a> or <a href ="./tag/GeoBooster" style = "font-weight: bold">GeoBooster</a>.  This will help people discover your post!  GeoDreamers share their GeoDreams, which can include sketches and diagrams of their ideas, outlandish and unfounded ideas or others&#39; ideas that they would like to see become reality&#33;  GeoMakers share their projects, which can include photos of what they have made, diagrams of their projects, ingredients, step by step instructions, or links to external resources.  GeoBoosters share event announcements, requests for troubleshooting, reports from a field test, and ideas for enhancements.</p>
+				<hr />
+			<% end %>
+		<% else %>
+			<h3 class="hidden-phone"><i class="icon-file"></i> Don&#39;t forget <br /> to tag&#33;</h3>
+			<h4 class="visible-phone"><i class="icon-file"></i> Don&#39;t forget to tag&#33;</h4>
+			<p class="visible-phone"><a onClick="$('#note-detail').removeClass('hidden-phone')">Read more &raquo;</a></p>
+			<div id="note-detail" class="hidden-phone">
+			<p>Make sure to tag your post as a <a href ="./tag/GeoDreamer" style = "font-weight: bold">GeoDreamer</a>, <a href ="./tag/GeoMaker" style = "font-weight: bold">GeoMaker</a> or <a href ="./tag/GeoBooster" style = "font-weight: bold">GeoBooster</a>.  This will help people discover your post!  GeoDreamers share their GeoDreams, which can include sketches and diagrams of their ideas, outlandish and unfounded ideas or others&#39; ideas that they would like to see become reality&#33;  GeoMakers share their projects, which can include photos of what they have made, diagrams of their projects, ingredients, step by step instructions, or links to external resources.  GeoBoosters share event announcements, requests for troubleshooting, reports from a field test, and ideas for enhancements.</p>
+			<hr />
+		<% end %>
+	<hr />
       <div class="sidebar-nav">
         <ul class="nav nav-list">
           <li class="nav-header">More</li>
-          <li><a href="/getting-started">Getting started with Public Lab</a></li>
+          <li><a href="/getting-started">Getting started with GeoMakers</a></li>
           <li><a href="/wiki/posting-research">About posting research</a></li>
-          <li><a href="/wiki/authoring-help#Advanced+formatting">Advanced formatting</a></li>
+          <li><a href="/wiki/authoring-help">Advanced formatting</a></li>
         </ul>
       </div>
     </div>
