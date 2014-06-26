@@ -42,7 +42,7 @@ curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
 
 ###Install Rails
 ```
-gem install rails -v 3.2.18
+gem install rails -v 3.2.18 --no-ri --no-rdoc
 ```
 
 
@@ -62,14 +62,14 @@ git clone http://github.com/DanielJDufour/geomakers.git
 
 ###Checkout respective branch
 ```
-cd geomakers
+cd ~/geomakers
 git checkout production
 ```
 
 
 ###Add user and password to config.yml
 ```
-vim/config/config.yml
+vim config/config.yml
 ```
 
 
