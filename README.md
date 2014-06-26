@@ -69,7 +69,7 @@ git checkout production
 
 ###Add user and password to config.yml
 ```
-vim config/config.yml
+vim ~/geomakers/config/config.yml
 ```
 
 
