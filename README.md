@@ -1,46 +1,38 @@
 ###Instructions on how to setup GeoMakers
 
-Update
-```sudo apt-get update
+##Update
+```
+sudo apt-get update
 ```
 
-###Step 2: Install Packages
-
-Install Packages That We'll Use Later::
-
-'''
+##Install Packages That We'll Use Later
+```
 sudo apt-get install -y curl vim git
-'''
+```
 
-###Step 3: Install MySQL
-
-'''
+##Install MySQL
+```
 sudo apt-get install -y mysql-server
 sudo apt-get install mysql-client-dev
 sudo apt-get install libmysqlclient-dev
-'''
+```
 
-###Step 4: Remove Old Ruby
-
+##Remove Old Ruby
 Ubuntu ships with a messed-up version of ruby
-
-'''
+```
 sudo apt-get remove -y --purge ruby-rvm ruby
 sudo rm -rf /usr/share/ruby-rvm /etc/rmvrc /etc/profile.d/rvm.sh
 rm -rf ~/.rvm* ~/.gem/ ~/.bundle*
-'''
+```
 
-###Step 5: Install Ruby Version Manager (RVM)
-
-'''
+##Install Ruby Version Manager (RVM)
+```
 curl -L https://get.rvm.io | bash -s stable
-'''
-
-###Step 6: Install Ruby
-
-'''
+```
+###Install Ruby
+```
 curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
-'''
+```
 
 ###Step 7: Install Rails
 
