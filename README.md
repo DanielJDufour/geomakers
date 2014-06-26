@@ -96,7 +96,7 @@ rake db:migrate
 ```
 
 
-###Step 14: Run the Rails app
+###Run the Rails app
 ```
 rake test
 passenger start
