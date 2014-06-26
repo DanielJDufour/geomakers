@@ -16,7 +16,7 @@ sudo apt-get install -y curl vim git
 ```
 sudo apt-get install -y mysql-server
 sudo apt-get install mysql-client
-sudo apt-get install libmysqlclient-dev
+sudo apt-get install -y libmysqlclient-dev
 ```
 
 
