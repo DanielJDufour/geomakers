@@ -82,7 +82,7 @@ bundle install
 
 ###Install Passenger
 ```
-gem install passenger
+gem install passenger --no-ri --no-rdoc
 ```
 
 ###Setup Database
