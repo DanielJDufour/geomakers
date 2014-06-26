@@ -1,4 +1,4 @@
-<h2>Log in <small> or <a href="/signup">sign up to join</a> the Public Lab network</small></h2>
+<h2>Log in <small> or <a href="/signup">sign up to join</a> the GeoMakers network</small></h2>
 
 <%= form_for @user_session, :as => :user_session, :url => { :action => "create" }, :html => {:class => "form"} do |f| %>
   <% if f.error_messages != "" %><div class="alert alert-error"><%= f.error_messages %></div><% end %>
@@ -8,8 +8,6 @@
   <p><%= f.text_field :username, {:placeholder => "username", :tabindex => 1} %></p>
   <p><%= f.password_field :password, {:placeholder => "password", :tabindex => 2} %></p>
   <input type="hidden" name="return_to" value="<%= params[:return_to] %>" />
-
-  <p style="width:30%;"><i class="icon icon-exclamation-sign"></i> If you are migrating from the old PublicLaboratory.org website, you will be asked to connect your old account when you log in.</p>
 
   <p><label class="checkbox">
     <%= f.check_box :remember_me %> Remember me
