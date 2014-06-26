@@ -1,11 +1,31 @@
-<a style="margin-bottom:6px;" rel="tooltip" title="Share your work with others" data-placement="bottom" href="/post" class="btn btn-primary btn-large btn-block hidden-phone"><i class="icon-pencil icon-white"></i> Write a research note</a>
-<div class="btn-group visible-phone" style="margin-bottom:6px;">
-  <a rel="tooltip" title="Share your work with others" data-placement="bottom" href="/post" class="btn btn-primary btn-large"><i class="icon-pencil icon-white"></i> Post research</a>
-  <a class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+<a style="margin-bottom:6px;" rel="tooltip" title="GeoDreamers:  Share Your GeoDreams with GeoMakers!" data-placement="bottom" href="/post?tags=GeoDreamer" class="btn btn-primary btn-large btn-block hidden-phone">
+	<div class = "pic-Icon-large" id ="pic-IconGeoDreamers"></div>
+	<div class = "button-text">GeoDreamers:  Share Your GeoDreams with GeoMakers&#33;</div>
+</a>
 
-  <ul class="dropdown-menu">
-    <li><a href="/post"><i class="icon icon-pencil"></i> <b>Post a research note</b></a></li>
-    <li><a href="/wiki/new"><i class="icon icon-book"></i> Create a wiki page</a></li>
+<a style="margin-bottom:6px;" rel="tooltip" title="GeoMakers:  Share Your Innovations with the World!" data-placement="bottom" href="/post?tags=GeoMaker" class="btn btn-primary btn-large btn-block hidden-phone">
+	<div class = "pic-Icon-large" id ="pic-IconGeoMakers"></div>
+	<div class = "button-text">GeoMakers:  Share Your Innovations with the World&#33;</div>
+</a>
+
+<a style="margin-bottom:6px;" rel="tooltip" title="GeoBoosters:  Show GeoMakers How You Used Their Projects!" data-placement="bottom" href="/post?tags=GeoBooster" class="btn btn-primary btn-large btn-block hidden-phone">
+	<div class = "pic-Icon-large" id ="pic-IconGeoBoosters"></div>
+	<div class = "button-text">GeoBoosters:  Show GeoMakers How You Used Their Projects&#33;</div>
+</a>
+
+<div class="btn-group visible-phone" style="margin-bottom:6px;">
+	<a rel="tooltip" title="Share your work with others" data-placement="bottom" href="/post" class="btn btn-primary btn-large">
+		<i class="icon-pencil icon-white"></i>
+		Post research
+	</a>
+<a class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#">
+	<span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+    <li><a href="/post?tags=GeoDreamer"><div class = "pic-Icon-small" id ="pic-IconGeoDreamers"></div><b>GeoDreamers</b></a></li>
+    <li><a href="/post?tags=GeoMaker"><div class = "pic-Icon-small" id ="pic-IconGeoMakers"></div><b>GeoMakers</b></a></li>
+    <li><a href="/post?tags=GeoBooster"><div class = "pic-Icon-small" id ="pic-IconGeoBoosters"></div><b>GeoBoosters</b></a></li>
+<li><a href="/wiki/new"><i class="icon icon-book"></i> Create a wiki page</a></li>
     <li class="divider"></li>
     <li><a href="/wiki/about-posting" class="hidden-desktop"><i class="icon icon-question-sign"></i> About posting</a></li>
     <% if current_user && (current_user.role == "moderator" || current_user.role == "admin") %>
@@ -27,5 +47,5 @@
   </ul>
 </div>
 <% end %>
-<p style="padding-top:10px;margin-bottom:4px;"><a href="/wiki"><i class="icon icon-book"></i> Browse the Public Lab Wiki &raquo;</a></p>
+<p style="padding-top:10px;margin-bottom:4px;"><a href="/wiki"><i class="icon icon-book"></i> Browse the GeoMakers Wiki &raquo;</a></p>
 <hr style="margin-bottom:20px;"/>
