@@ -21,7 +21,7 @@ sudo apt-get install -y libmysqlclient-dev
 
 
 ####Remove Old Ruby
-Ubuntu ships with a messed-up version of ruby
+Ubuntu sometimes ships with a messed-up version of ruby
 ```
 sudo apt-get remove -y --purge ruby-rvm ruby
 sudo rm -rf /usr/share/ruby-rvm /etc/rmvrc /etc/profile.d/rvm.sh
