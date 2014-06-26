@@ -1,12 +1,7 @@
-Instructions on how to setup GeoMakers
-
-###Step 1: Update
+###Instructions on how to setup GeoMakers
 
 Update
-
-'''
-sudo apt-get update
-'''
+```sudo apt-get update```
 
 ###Step 2: Install Packages
 
