@@ -24,8 +24,7 @@ sudo apt-get install postgresql-server-dev-X.Y
 SQLite support:
 (nothing?)
 
-create config/database.yml with test, development headings.
-See config/database.yml.example and modify as desired.
+See config/database.yml and modify as desired.
 
 
 3. Install Gems
