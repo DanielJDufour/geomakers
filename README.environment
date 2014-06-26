@@ -1,66 +1,109 @@
-0. Prerequisites:
----
+###Step 1: Update
 
-Ruby, MySQL, Rails 3.2.x
+Update
 
-1. Install RVM
----
+'''
+sudo apt-get update
+'''
 
-Read about and install RVM here: https://rvm.io/ (preferred over apt-get version)
+###Step 2: Install Packages
 
-Then configure it:
-rvm install 1.9.3 -n plots2
-rvm 1.9.3-plots2
+Install Packages That We'll Use Later::
 
+'''
+sudo apt-get install -y curl vim git
+'''
 
-2. Setup Database adapters
----
-MySQL support on Debian/Ubuntu:
+###Step 3: Install MySQL
+
+'''
+sudo apt-get install -y mysql-server
+sudo apt-get install mysql-client-dev
 sudo apt-get install libmysqlclient-dev
+'''
 
-PostgreSQL support on Debian:
-sudo apt-get install postgresql-server-dev-X.Y
+###Step 4: Remove Old Ruby
 
-SQLite support:
-(nothing?)
+Ubuntu ships with a messed-up version of ruby
 
-See config/database.yml and modify as desired.
+'''
+sudo apt-get remove -y --purge ruby-rvm ruby
+sudo rm -rf /usr/share/ruby-rvm /etc/rmvrc /etc/profile.d/rvm.sh
+rm -rf ~/.rvm* ~/.gem/ ~/.bundle*
+'''
 
+###Step 5: Install Ruby Version Manager (RVM)
 
-3. Install Gems
----
-cd $ROOT/
+'''
+curl -L https://get.rvm.io | bash -s stable
+'''
 
-General:
-bundle update # not always required, but handy
+###Step 6: Install Ruby
+
+'''
+curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
+'''
+
+###Step 7: Install Rails
+
+'''
+gem install rails -v 3.2.18
+'''
+
+###Step 8: Install Bundler
+
+'''
+gem install bundler --no-ri --no-rdoc
+'''
+
+###Step 9: Download this Repository
+
+We recommend placing it in the home directory
+
+'''
+cd ~/
+git clone http://github.com/DanielJDufour/geomakers.git
+'''
+
+###Step 10: Checkout respective branch
+'''
+cd geomakers
+git checkout production
+'''
+
+###Step 10: Add user and password to config.yml
+'''
+vim/config/config.yml
+'''
+
+###Step 11: Install Gems
+'''
+bundle update
 bundle install
+'''
 
-Exclude testing and sqlite:
-bundle install --without test sqlite
-
-Exclude mysql support:
-bundle install --without mysql
-
-4. Install environmental dependencies
----
+###Step 12: Install Passenger
+'''
 gem install passenger
+'''
 
+###Step 13: Setup Database
 
-5. Set Up the Database
----
 Create the tables, schema, and fill the database with example seed data:
+
+'''
 rake db:setup
+'''
 
-Create the tables and schema with the example data:
-rake db:create && rake db:migrate
+Move in the example data
+'''
+rake db:migrate
+'''
 
-6. Run the Rails app
----
+
+###Step 14: Run the Rails app
+
+'''
 rake test
 passenger start (development by default)
-
-Login credentials:
-login: admin, moderator, or user
-password: password
-
-
+'''
